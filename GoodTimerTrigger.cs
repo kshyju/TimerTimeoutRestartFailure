@@ -14,7 +14,7 @@ namespace CRI396987485TimeoutLock
         }
 
         [Function("GoodTimerTrigger")]
-        public void Run([TimerTrigger("0 */1 * * * *")] MyInfo myTimer)
+        public void Run([TimerTrigger("*/10 * * * * *")] MyInfo myTimer)
         {
             _logger.LogInformation($"~~ GoodTimerTrigger function executed at: {DateTime.Now} ~~");
         }

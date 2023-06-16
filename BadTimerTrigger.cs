@@ -13,7 +13,7 @@ namespace CRI396987485TimeoutLock
         }
 
         [Function("BadTimerTrigger")]
-        public async Task RunAsync([TimerTrigger("0 */1 * * * *")] MyInfo myTimer)
+        public async Task RunAsync([TimerTrigger("*/10 * * * * *")] MyInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             
